@@ -7,7 +7,9 @@
     <meta name="keywords" content="html, css, js, site">
     
 </head>
-<body>
+<body onload="Relogio()">
+    <div id="txt"></div>
+    <div id="txtf"></div>
     <header>
         <h1>Hello World</h1>
       </header>
@@ -15,10 +17,33 @@
         
       </nav>
       <main>
-        
+        <h2>Quando esta página da Web foi criada? Verifique o título da página para obter a resposta.</h2>
       </main>
       <footer>
         
       </footer>
 </body>
+ <script>
+     function Relogio() {
+          hora = new Date();
+          hr = data.getHours();
+          min = data.getMinutes();
+          s = data.getSeconds();
+          
+         
+        document.getElementById('txt').innerHTML = hr + ":" + min + ":" + s;
+     
+     setTimeout('Relogio()',500)
+     }
+     var data = new Date();
+     var dia     = data.getDate();           // 1-31
+     var dia_sem = data.getDay();            // 0-6 (zero=domingo)
+     var mes     = data.getMonth();          // 0-11 (zero=janeiro)
+     var ano2    = data.getYear();           // 2 dígitos
+     var ano4    = data.getFullYear();       // 4 dígitos
+
+    
+     var str_data = dia + '/' + (mes+1) + '/' + ano4;
+     document.getElementById('txtf').innerHTML =' Hoje é ' + str_data;
+ </script>
 </html>
