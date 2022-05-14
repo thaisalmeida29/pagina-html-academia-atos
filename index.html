@@ -9,46 +9,86 @@
 
 </head>
 <div>
-<body onload="Relogio()">
-  <div id="txt"></div>
-  <div id="txtf"></div>
-  <style>
-    body {
-      font-family: Arial;
 
-    }
-    p { 
-      text-indent: 50px; 
-    }
+  <body onload="Relogio()">
+    <div id="txt"></div>
+    <div id="txtf"></div>
+    <style>
+      body {
+        font-family: Arial;
 
-    div {
-      width: 960px;
-      margin: auto;
-    }
-    
-  </style>
-  <header>
-    <h1 style="color:blue;text-align:center;";>Hello World!</h1>
-  </header>
-  
-  <main>
-    <h2>Quando esta página da Web foi criada?</h2>
-    <p> Verifique o <strong>título da página</strong> <em> para obter a resposta.</em></p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et
-      augue nec leo aliquet posuere ac vel eros. Nunc ac magna ac ex ultricies faucibus.
-      Etiam accumsan sollicitudin erat, quis mollis arcu venenatis vel. consectetur adipiscing elit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et
-      augue nec leo aliquet posuere ac vel eros. Nunc ac magna ac ex ultricies faucibus.
-      Etiam accumsan sollicitudin erat, quis mollis arcu venenatis vel. consectetur adipiscing elit.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et
-      augue nec leo aliquet posuere ac vel eros. Nunc ac magna ac ex ultricies faucibus.
-      Etiam accumsan sollicitudin erat, quis mollis arcu venenatis vel. consectetur adipiscing elit.</p>
+
+      }
+
+      p {
+        text-indent: 50px;
+        font-weight: 550;
+      }
+
+      div {
+        width: 960px;
+        margin: auto;
+      }
+
+      li {
+        font-weight: 500;
+      }
+
+      h4 {
+        text-indent: 70px;
+      }
+
+      .code {
+        background-color: #F1F1F1;
+        font-weight: 600;
+       
+      }
+
+
+
+      img {
+        height: 1000px;
+        width: 100%;
+
+      }
+
+      a {
+        font-size: 10px;
+
+      }
+      .link {
+        margin-top: -200px;
+        text-indent: 0;
+      }
+
+
+      img {
+        height: 1000px;
+        width: 100%;
+      }
+    </style>
+    <header>
+      <h1 style="color:blue;text-align:center;" ;>Hello World!</h1>
+    </header>
+
+    <main>
+      <h2>Quando esta página da Web foi criada?</h2>
+      <p> Verifique o <strong>título da página</strong> <em> para obter a resposta.</em></p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et
+        augue nec leo aliquet posuere ac vel eros. Nunc ac magna ac ex ultricies faucibus.
+        Etiam accumsan sollicitudin erat, quis mollis arcu venenatis vel. consectetur adipiscing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et
+        augue nec leo aliquet posuere ac vel eros. Nunc ac magna ac ex ultricies faucibus.
+        Etiam accumsan sollicitudin erat, quis mollis arcu venenatis vel. consectetur adipiscing elit.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et
+        augue nec leo aliquet posuere ac vel eros. Nunc ac magna ac ex ultricies faucibus.
+        Etiam accumsan sollicitudin erat, quis mollis arcu venenatis vel. consectetur adipiscing elit.</p>
       <h2>Os elementos HTML utilizados nesta página até agora foram:</h2>
-      
+
 
       <ul>
-      
-         <li>&lt!DOCTYPE html&gt</li>
+
+        <li>&lt!DOCTYPE html&gt</li>
         <li>&lthtml&gt</li>
         <li>&lthead&gt</li>
         <li>&ltbody&gt</li>
@@ -62,37 +102,61 @@
         <li>&ltul&gt</li>
         <li>&ltli&gt</li>
       </ul>
-    
+
       <h3>O elemento &ltimg&gt :</h3>
 
+      <p>O elemento HTML &ltimg&gt (or HTML Image Element)
+        representa a inserção de imagem no documento, sendo implementado
+        também pelo HTML5 para uma melhor experiência com o elemento &ltfigure&gt e &ltfigcaption&gt.</p>
+
+      <h4>Exemplos de uso:</h4>
       
-  </main>
-  <footer>
-
-  </footer>
-</body>
-<script>
-  function Relogio() {
-    hora = new Date();
-    hr = data.getHours();
-    min = data.getMinutes();
-    s = data.getSeconds();
-
-
-    document.getElementById('txt').innerHTML = hr + ":" + min + ":" + s;
-
-    setTimeout('Relogio()', 500)
-  }
-  var data = new Date();
-  var dia = data.getDate();           // 1-31
-  var dia_sem = data.getDay();            // 0-6 (zero=domingo)
-  var mes = data.getMonth();          // 0-11 (zero=janeiro)
-  var ano2 = data.getYear();           // 2 dígitos
-  var ano4 = data.getFullYear();       // 4 dígitos
+      <div class="code">
+        <pre>
+          <code>
+            &ltfigure&gt
+              &ltimg src="imagem.jpg" alt="Minha Figura"&gt
+              &ltfigcaption&gtInformações da Figura &lt/figcaption&gt
+            &lt/figure&gt
+          </code>
+        </pre>
+      </div>
 
 
-  var str_data = dia + '/' + (mes + 1) + '/' + ano4;
-  document.getElementById('txtf').innerHTML = ' Hoje é ' + str_data;
-</script>
+
+      <img src="img.jpg" alt="imagem de html e css">
+      <p class="link"><a href="https://www.asycom.es/es/noticias/marketing-online-2/agencia-de-diseno-web-creacion/">Foto tirada do
+          site asycom</a></p>
+
+
+    </main>
+    <footer>
+
+    </footer>
+  </body>
+  <script>
+    function Relogio() {
+      hora = new Date();
+      hr = data.getHours();
+      min = data.getMinutes();
+      s = data.getSeconds();
+
+
+      document.getElementById('txt').innerHTML = hr + ":" + min + ":" + s;
+
+      setTimeout('Relogio()', 500)
+    }
+    var data = new Date();
+    var dia = data.getDate();           // 1-31
+    var dia_sem = data.getDay();            // 0-6 (zero=domingo)
+    var mes = data.getMonth();          // 0-11 (zero=janeiro)
+    var ano2 = data.getYear();           // 2 dígitos
+    var ano4 = data.getFullYear();       // 4 dígitos
+
+
+    var str_data = dia + '/' + (mes + 1) + '/' + ano4;
+    document.getElementById('txtf').innerHTML = ' Hoje é ' + str_data;
+  </script>
 </div>
+
 </html>
