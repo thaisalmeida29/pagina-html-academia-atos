@@ -1,49 +1,98 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <title>Página Html, Css E JS</title>
-    <meta charset="utf-8">
-    <meta name="description" content="Página sobre HTML, CSS e JS">
-    <meta name="keywords" content="html, css, js, site">
-    
-</head>
-<body onload="Relogio()">
-    <div id="txt"></div>
-    <div id="txtf"></div>
-    <header>
-        <h1>Hello World</h1>
-      </header>
-      <nav>
-        
-      </nav>
-      <main>
-        <h2>Quando esta página da Web foi criada? Verifique o título da página para obter a resposta.</h2>
-      </main>
-      <footer>
-        
-      </footer>
-</body>
- <script>
-     function Relogio() {
-          hora = new Date();
-          hr = data.getHours();
-          min = data.getMinutes();
-          s = data.getSeconds();
-          
-         
-        document.getElementById('txt').innerHTML = hr + ":" + min + ":" + s;
-     
-     setTimeout('Relogio()',500)
-     }
-     var data = new Date();
-     var dia     = data.getDate();           // 1-31
-     var dia_sem = data.getDay();            // 0-6 (zero=domingo)
-     var mes     = data.getMonth();          // 0-11 (zero=janeiro)
-     var ano2    = data.getYear();           // 2 dígitos
-     var ano4    = data.getFullYear();       // 4 dígitos
 
+<head>
+  <title>Página Html, Css E JS</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Página sobre HTML, CSS e JS">
+  <meta name="keywords" content="html, css, js, site">
+
+</head>
+<div>
+<body onload="Relogio()">
+  <div id="txt"></div>
+  <div id="txtf"></div>
+  <style>
+    body {
+      font-family: Arial;
+
+    }
+    p { 
+      text-indent: 50px; 
+    }
+
+    div {
+      width: 960px;
+      margin: auto;
+    }
     
-     var str_data = dia + '/' + (mes+1) + '/' + ano4;
-     document.getElementById('txtf').innerHTML =' Hoje é ' + str_data;
- </script>
+  </style>
+  <header>
+    <h1 style="color:blue;text-align:center;";>Hello World!</h1>
+  </header>
+  
+  <main>
+    <h2>Quando esta página da Web foi criada?</h2>
+    <p> Verifique o <strong>título da página</strong> <em> para obter a resposta.</em></p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et
+      augue nec leo aliquet posuere ac vel eros. Nunc ac magna ac ex ultricies faucibus.
+      Etiam accumsan sollicitudin erat, quis mollis arcu venenatis vel. consectetur adipiscing elit.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et
+      augue nec leo aliquet posuere ac vel eros. Nunc ac magna ac ex ultricies faucibus.
+      Etiam accumsan sollicitudin erat, quis mollis arcu venenatis vel. consectetur adipiscing elit.</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis et
+      augue nec leo aliquet posuere ac vel eros. Nunc ac magna ac ex ultricies faucibus.
+      Etiam accumsan sollicitudin erat, quis mollis arcu venenatis vel. consectetur adipiscing elit.</p>
+      <h2>Os elementos HTML utilizados nesta página até agora foram:</h2>
+      
+
+      <ul>
+      
+         <li>&lt!DOCTYPE html&gt</li>
+        <li>&lthtml&gt</li>
+        <li>&lthead&gt</li>
+        <li>&ltbody&gt</li>
+        <li>&ltdiv&gt</li>
+        <li>&ltstyle&gt</li>
+        <li>&ltheader&gt</li>
+        <li>&lth1&gt</li>
+        <li>&ltmain&gt</li>
+        <li>&lth2&gt</li>
+        <li>&ltp&gt</li>
+        <li>&ltul&gt</li>
+        <li>&ltli&gt</li>
+      </ul>
+    
+      <h3>O elemento &ltimg&gt :</h3>
+
+      
+  </main>
+  <footer>
+
+  </footer>
+</body>
+<script>
+  function Relogio() {
+    hora = new Date();
+    hr = data.getHours();
+    min = data.getMinutes();
+    s = data.getSeconds();
+
+
+    document.getElementById('txt').innerHTML = hr + ":" + min + ":" + s;
+
+    setTimeout('Relogio()', 500)
+  }
+  var data = new Date();
+  var dia = data.getDate();           // 1-31
+  var dia_sem = data.getDay();            // 0-6 (zero=domingo)
+  var mes = data.getMonth();          // 0-11 (zero=janeiro)
+  var ano2 = data.getYear();           // 2 dígitos
+  var ano4 = data.getFullYear();       // 4 dígitos
+
+
+  var str_data = dia + '/' + (mes + 1) + '/' + ano4;
+  document.getElementById('txtf').innerHTML = ' Hoje é ' + str_data;
+</script>
+</div>
 </html>
